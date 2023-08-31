@@ -1,0 +1,186 @@
+/* Importação de fontes */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Reset de estilos básicos */
+* {
+  font-family: 'Poppins', sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+/* Corpo da página */
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
+/* Overlay */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(112, 112, 112, 0.644);
+  z-index: -1;
+}
+
+/* Corpo da página */
+body {
+  background-image: url(/imgs/back.svg);
+  background-attachment: fixed;
+  background-blend-mode: hard-light;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Classe de ocultar */
+.hide {
+  display: none;
+}
+
+/* Container geral */
+.container {
+  background-color: rgb(12, 12, 12);
+  box-shadow: #363535 0px 2px 4px;
+  padding: 2rem;
+  color: #fdfdfd;
+  border-radius: 1rem;
+}
+
+/* Formulário */
+.form h3 {
+  margin-bottom: 1rem;
+}
+
+.form-input-container {
+  display: flex;
+}
+
+.form input {
+  padding: 0.8rem;
+  border: none;
+  flex: 1;
+  border-radius: 4px;
+}
+
+.form button {
+  padding: .8rem;
+  min-width: 50px;
+  margin-left: 8px;
+  background-color: black;
+  color: gold;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Clima */
+#weather-data {
+  border-top: 1px solid gold;
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  text-align: center;
+}
+
+#weather-data h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0.6rem;
+}
+
+#weather-data h2 i {
+  font-size: 1rem;
+}
+
+#weather-data span {
+  margin: 0.6rem;
+}
+
+#country {
+  height: 28px;
+}
+
+#description {
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+#description-container {
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  margin: 0.6rem 0;
+}
+
+#details-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#details-container #humidity {
+  border-right: 1px solid gold;
+  margin: 0.6rem;
+  padding: 0.6rem;
+}
+
+/* Animações climáticas */
+.weather-clear {
+  background-image: url('https://i.pinimg.com/originals/f8/da/3d/f8da3de269b93dfc680e38f93520c615.jpg');
+}
+
+.weather-clouds {
+  background-image: url('https://i.pinimg.com/originals/f0/2a/c7/f02ac7bf0730b74c461b53d04a8eab2e.gif');
+}
+
+.weather-rain {
+  background-image: url('https://gray-wtoc-prod.cdn.arcpublishing.com/resizer/LXxPGI3EaFzsfTKTgJ0Ngd528L4=/1200x675/smart/filters:quality(85)/cloudfront-us-east-1.images.arcpublishing.com/gray/SZRS43TDQFAK5JCUUTXZJHV5MQ.gif');
+}
+
+/* Rede Social */
+.rede-social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: static;
+}
+
+.rede-social a {
+  position: static;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 40px;
+  background: transparent;
+  border-radius: 50%;
+  font-size: 20px;
+  color: #fdfdfd;
+  text-decoration: none;
+  z-index: 1;
+  overflow: hidden;
+  transition: .5s;
+}
+
+.rede-social a:hover {
+  color: gold;
+}
+
+.rede-social a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: gold;
+  z-index: -1;
+  transition: .5s;
+}
