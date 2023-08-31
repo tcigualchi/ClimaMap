@@ -27,7 +27,7 @@ body, html {
 
 /* Corpo da página */
 body {
-  background-image: url(/imgs/back.svg);
+  background-image: url(/imgs/back.jpg);
   background-attachment: fixed;
   background-blend-mode: hard-light;
   background-size: cover;
