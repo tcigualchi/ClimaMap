@@ -27,7 +27,7 @@ body, html {
 
 /* Corpo da página */
 body {
-  background-image: url(imgs/back.jpg);
+  background-image: url(https://raw.githubusercontent.com/tcigualchi/ClimaMap/main/imgs/back.jpg);
   background-attachment: fixed;
   background-blend-mode: hard-light;
   background-size: cover;
