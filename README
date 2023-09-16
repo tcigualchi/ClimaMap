@@ -1,0 +1,33 @@
+Previsão do Tempo
+Este é um projeto de previsão do tempo que permite aos usuários pesquisar informações meteorológicas para locais em todo o mundo, incluindo bairros. O projeto foi desenvolvido utilizando HTML, CSS e JavaScript.
+
+Funcionalidades
+Pesquisa Global: Insira o nome da cidade ou bairro que você deseja consultar e obtenha informações atualizadas sobre o clima.
+
+Detalhes do Clima: Veja dados detalhados, como temperatura atual, umidade, velocidade do vento, e condições climáticas.
+
+Ícones Ilustrativos: Ícones representativos ajudam a visualizar rapidamente as condições climáticas.
+
+Como Usar
+Clone este repositório em sua máquina local.
+
+bash
+Copy code
+git clone https://github.com/tcigualchi/ClimaMap.git
+Abra o arquivo index.html em seu navegador.
+
+Na página inicial, insira o nome da cidade ou bairro que você deseja consultar na caixa de pesquisa e pressione Enter.
+
+Os resultados da previsão do tempo serão exibidos na tela, fornecendo informações úteis sobre as condições atuais e futuras.
+
+Próximos Passos
+Este projeto é uma implementação inicial de um aplicativo de previsão do tempo. Aqui estão alguns aprimoramentos que você pode considerar:
+
+Melhorias na Interface: Aprimore o design e a usabilidade da interface do usuário.
+
+Integração de API: Considere usar uma API de previsão do tempo para obter dados mais precisos e detalhados.
+
+Funcionalidades Adicionais: Adicione recursos adicionais, como previsão de vários dias, histórico de pesquisa e opções de idioma.
+
+Contribuição
+Contribuições são bem-vindas! Sinta-se à vontade para abrir problemas (issues) ou enviar pull requests para melhorar este projeto.
