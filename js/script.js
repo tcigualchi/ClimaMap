@@ -22,6 +22,18 @@ const weatherConditionClasses = {
   Snow: 'weather-snow',
 };
 
+// Função para exibir mensagem de erro quando a cidade não for encontrada
+const showNotFoundError = () => {
+  cityElement.innerText = "Localidade não encontrada";
+  tempElement.innerText = "";
+  descElement.innerText = "";
+  humidityElement.innerText = "";
+  windElement.innerText = "";
+  weatherIconElement.setAttribute("src", "");
+  countryElement.setAttribute("src", "");
+  weatherContainer.classList.remove("hide");
+};
+
 // Funções
 const getWeatherData = async (city) => {
   const apiWeatherURL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}&lang=pt_br`;
@@ -33,24 +45,36 @@ const getWeatherData = async (city) => {
 };
 
 const showWeatherData = async (city) => {
-  const data = await getWeatherData(city);
+  try {
+    const data = await getWeatherData(city);
 
-  cityElement.innerText = data.name;
-  tempElement.innerText = parseInt(data.main.temp);
-  descElement.innerText = data.weather[0].description;
-  weatherIconElement.setAttribute(
-    "src",
-    `http://openweathermap.org/img/wn/${data.weather[0].icon}.png`
-  );
-  countryElement.setAttribute(
-    "src",
-    `https://www.countryflagicons.com/SHINY/64/${data.sys.country}.png`
-  );
-  humidityElement.innerText = `${data.main.humidity}%`;
-  windElement.innerText = `${data.wind.speed}km/h`;
+    if (data.cod === "404") {
+      // A cidade não foi encontrada, exibe a mensagem de erro personalizada
+      showNotFoundError();
+    } else {
+      // A cidade foi encontrada, exibe os dados de previsão do tempo
+      cityElement.innerText = data.name;
+      tempElement.innerText = parseInt(data.main.temp);
+      descElement.innerText = data.weather[0].description;
+      weatherIconElement.setAttribute(
+        "src",
+        `http://openweathermap.org/img/wn/${data.weather[0].icon}.png`
+      );
+      countryElement.setAttribute(
+        "src",
+        `https://www.countryflagicons.com/SHINY/64/${data.sys.country}.png`
+      );
+      humidityElement.innerText = `${data.main.humidity}%`;
+      windElement.innerText = `${data.wind.speed}km/h`;
 
-  weatherContainer.classList.remove("hide");
-  applyWeatherAnimation(data.weather[0].main);
+      weatherContainer.classList.remove("hide");
+      applyWeatherAnimation(data.weather[0].main);
+    }
+  } catch (error) {
+    // Trate erros de rede ou outros erros inesperados aqui
+    console.error("Ocorreu um erro:", error);
+    showNotFoundError();
+  }
 };
 
 const applyWeatherAnimation = (weatherCondition) => {
