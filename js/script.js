@@ -25,12 +25,12 @@ const weatherConditionClasses = {
 // Função para exibir mensagem de erro quando a cidade não for encontrada
 const showNotFoundError = () => {
   cityElement.innerText = "Localidade não encontrada";
-  tempElement.innerText = "";
-  descElement.innerText = "";
-  humidityElement.innerText = "";
-  windElement.innerText = "";
-  weatherIconElement.setAttribute("src", "");
-  countryElement.setAttribute("src", "");
+  tempElement.style.display = "none";
+  descElement.style.display = "none";
+  humidityElement.style.display = "none";
+  windElement.style.display = "none";
+  weatherIconElement.style.display = "none";
+  countryElement.style.display = "none";
   weatherContainer.classList.remove("hide");
 };
 
