@@ -62,7 +62,7 @@ const showWeatherData = async (city) => {
       );
       countryElement.setAttribute(
         "src",
-        `https://www.countryflagicons.com/SHINY/64/${data.sys.country}.png`
+        `https://www.flagsapi.com/SHINY/64/${data.sys.country}.png`
       );
       humidityElement.innerText = `${data.main.humidity}%`;
       windElement.innerText = `${data.wind.speed}km/h`;
